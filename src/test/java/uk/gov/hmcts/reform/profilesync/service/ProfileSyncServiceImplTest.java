@@ -87,7 +87,7 @@ public class ProfileSyncServiceImplTest {
 
         IdamClient.TokenExchangeResponse tokenExchangeResponse = Mockito.mock(IdamClient.TokenExchangeResponse.class);
 
-        when(idamClientMock.getToken(ProfileSyncServiceImpl.BASIC + clientAuth, formParams, "")).thenReturn(tokenExchangeResponse);
+        when(idamClientMock.getToken(formParams)).thenReturn(tokenExchangeResponse);
         when(tokenExchangeResponse.getAccessToken()).thenReturn(MockDataProvider.clientAuthorization);
     }
 
